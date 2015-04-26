@@ -1,0 +1,23 @@
+#Course Project Code Book
+========================
+
+This Code Book contains a data set to work and you can find it in the following URL: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+In this repo you can find an attached R script called run_analysis.R to performs the following operations:
+
+1.- Take the training and test sets to create one data set, the result of the merged sets is a new data frame, with 10299 # of instances and 561 # of attributes.
+
+2.- The script reads the file "features.txt" and extracts only the measurements on the mean and standard deviation for each measurement. 
+
+3.- The script reads the file "activity_labels.txt" with the following values:
+
+			1 WALKING
+			2 WALKING_UPSTAIRS
+			3 WALKING_DOWNSTAIRS
+			4 SITTING
+			5 STANDING
+			6 LAYING
+        
+4.-  The script clean up the labels the data set with descriptive variable names: At this point you already have a clean data in a data frame with 10299 and 68 variables, here you have tidy data.
+
+5.- The script takes the previous data frame called "clean" to create a second data set with the average of each variable for each activity and each subject. The final result is created in a txt file called "data_averages.txt", this file contains 180 rows with the average of each variable.
